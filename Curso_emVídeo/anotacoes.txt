@@ -14,11 +14,36 @@ Problema: como se digitalizam esses arquivos?
 Por isso, surgiram os discos e hd's, que não faziam o armazenamento por meio de sequências, mas, por meio de índices, chaves identificadoras de cada registro, indexado ao nome de cada registro. Isso ajudou muito para reduzir em muito o tempo de achar um arquivo, por isso são chamados de: **Arquivos de acesso direto.**
 
 Década de 60; 
-- Departamento de defesa americano; 
+- Departamento de defesa americano e IBM; 
 - CODASYL; 
 - Surgimento do COBOL; 
 - Foco na estrutura de dados; 
 - Criação de banco de dados; 
+    Banco de dados: 
+    - Composto por 4 partes; 
+        - Base de Dados (Dados propriamente ditos (estrutura));
+        - Sistema Gerenciador (SGBD - Sistema Gerenciador de Banco de Dados);
+        - Linguagem de exploração
+        - Programas adicionais (Gerenciamento de usuários, otimizador de dados)
+- Atuação da IBM:
+    - Criação do Modelo de dados Hierárquicos; 
+        - Dados interligados de maneira hierárquica;
+    - Criação do Modelo de dados em rede; 
+        - Voltado para a interligação de dados de maneira inteligente;
+    
+    O problema dos dados hierárquicos e em rede, era que o relacionamento entre dados não facilitava o relacionamento entre computadores; 
+    Por isso, foi proposto um terceiro modelo: 
+    Modelo Relacional; 
+    Os dados seriam armazenador de maneira relacional, com uma correlação mais intrínseca; 
+    Um dado contém muito mais informações quando é possível de relacioná-lo com outras informações; 
+
+Para isso, vamos estudar o... 
+Structures English Query Language (SEQUEL)...
+Que depois virou o...
+Structured Query Language (SQL)
+
+SQL: 
+É uma linguagem de consulta, onde é possível dar instruções ao meio ambiente de banco de dados, que lhe retorna uma resposta; 
 
 
 
