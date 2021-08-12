@@ -1,0 +1,43 @@
+Aqui estão as anotações das aulas do curso em vídeo de Banco de Dados; 
+Origem dos bancos de dados: 
+
+Os primeiros computadores surgiram os computadores na década de 50, para fins militares ou acadêmicos. 
+Antigamente, os dados ficavam armazenados em papel, dentro de caixas e dento de arquivos metálicos; 
+A ficha, a pasta e o arquivo, possuem nomes específicos na área da TI. 
+**
+A Ficha - registros
+A Pasta - tabelas
+O Arquivo - arquivos
+**
+Problema: como se digitalizam esses arquivos? 
+**Arquivos sequencias**: dados guardados de maneira sequencial, digitalizados, com problemas de tempo para encontrar os arquivos; 
+Por isso, surgiram os discos e hd's, que não faziam o armazenamento por meio de sequências, mas, por meio de índices, chaves identificadoras de cada registro, indexado ao nome de cada registro. Isso ajudou muito para reduzir em muito o tempo de achar um arquivo, por isso são chamados de: **Arquivos de acesso direto.**
+
+Década de 60; 
+- Departamento de defesa americano; 
+- CODASYL; 
+- Surgimento do COBOL; 
+- Foco na estrutura de dados; 
+- Criação de banco de dados; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
