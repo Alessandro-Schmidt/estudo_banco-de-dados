@@ -45,7 +45,22 @@ Structured Query Language (SQL)
 SQL: 
 É uma linguagem de consulta, onde é possível dar instruções ao meio ambiente de banco de dados, que lhe retorna uma resposta; 
 
+>>>>>>>>>>> Aula 02 >>>>>>>>>>>
+O SQL segue aos 4 padrões, é um software livre e gratuíto; 
+Por definição, o MySQL, possui instruções que se caracterizam como linguagens. 
 
+Por exemplo: 
+DDL - Definição;    
+DML - Manipulação;  
+DQL - Solicitações; 
+DCL - Controle;     
+DTL - Transações;   
+
+4 princípios: 
+(D)urabilizade - Todo dado alterado, adicionado ou exluído deve permanecer assim; 
+(I)solamento - Duas transações feitas ao mesmo tempo, não podem interferir uma na outra, devem ser isoladas; 
+(C)onsistência - Toda transação deve levar o Banco de Dados de um estado conscistente para outro; 
+(A)tomicidade - Ou tudo dá certo, ou nada dá certo. Nada fica pela metade.
 
 
 
