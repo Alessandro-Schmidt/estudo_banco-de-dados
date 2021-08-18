@@ -29,4 +29,16 @@ nacionalidade varchar(20) default "Brasil"
 nacionalidade varchar(20) default "Brasil" ==  O padrão fica como Brasil
  */
 
+-- Primary key: campo identificador / atributo identificador; 
+drop table pessoas;
+create table pessoas(
+id int not null auto_increment, -- auto_increment == Ele mesmo preenche!
+nome varchar(30) not null,
+nascimento date,
+sexo enum('M','F'),
+peso decimal(5,2),
+altura decimal(3,2),
+nacionalidade varchar(20) default "Brasil",
+primary key(id)
+)default charset = utf8;
 
