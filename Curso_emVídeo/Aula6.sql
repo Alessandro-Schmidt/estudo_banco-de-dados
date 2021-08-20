@@ -51,9 +51,15 @@ desc Gafanhotos;
 create table if not exists cursos(
 nome varchar(30) not null unique, -- Primary key ≠ unique 
 descricao text,
-carga int, 
+carga int unsigned, -- Sem sinal!  
 totalaulas int,
-ano year
-);
+ano year default '2016'
+)default charset = utf8;
 -- Crie caso já não exista; 
 -- Primary key ≠ unique : Primeary key possui outras características. Unique não identifica os registros, porém não permite suas duplicidades; 
+
+-- create table if not exists Gafanhotos(teste,int); -- Esse código não funciona pois já existe. 
+
+-- Vamos adicionar a primary key; 
+alter table cursos 
+add column idcurso int first; 
