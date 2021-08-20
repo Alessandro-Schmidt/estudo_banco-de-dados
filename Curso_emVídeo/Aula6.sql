@@ -22,6 +22,38 @@ add column cpf int first;
 -- Se não por nada, ele considera a posição como última. 
 -- ***IMPORTANTE*** 
 -- A palavra column pode ser suprimida sem prejuízo ao código; 
+-- <<<<<<<<>>>>>>>>
+-- Para alterar a estrutura da definição, use: 
+-- alter table pessoas 
+-- modify column profissao varchar(20); -- Não é possível renomear o campo com este comando, apenas alterar o seu tipo de variável. 
+select * from pessoas;
+describe pessoas;
+-- ...
+-- ...
+-- Este comando não funciona, pois já existem dados, e ele não consegue adicionar uma variável do tipo obrigatória, pois não preenche dados que já estão armazenados; 
+
+-- Já esse código aqui funciona: 
+alter table pessoas
+modify profissao varchar(20) not null default ''; 
+ -- Nesse caso funciona, pois você dá uma resposta padrão para o atributo, o que faz com que ele seja capaz de preencher os dados já existentes com a mensagem padrão. 
 
 
- 
+-- Mudar nome de coluna: 
+alter table pessoas
+change column profissao prof varchar(20); 
+
+-- Para renomear a tabela; 
+alter table pessoas
+rename to Gafanhotos;
+
+desc Gafanhotos;
+
+create table if not exists cursos(
+nome varchar(30) not null unique, -- Primary key ≠ unique 
+descricao text,
+carga int, 
+totalaulas int,
+ano year
+);
+-- Crie caso já não exista; 
+-- Primary key ≠ unique : Primeary key possui outras características. Unique não identifica os registros, porém não permite suas duplicidades; 
