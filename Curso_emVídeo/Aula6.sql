@@ -1,0 +1,1 @@
+-- Hoje vamos aprender os comandos alter table e drop table
