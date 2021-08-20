@@ -33,8 +33,8 @@ describe pessoas;
 -- Este comando não funciona, pois já existem dados, e ele não consegue adicionar uma variável do tipo obrigatória, pois não preenche dados que já estão armazenados; 
 
 -- Já esse código aqui funciona: 
-alter table pessoas
-modify profissao varchar(20) not null default ''; 
+alter table Gafanhotos
+modify column prof varchar(34) NOT NULL default ''; 
  -- Nesse caso funciona, pois você dá uma resposta padrão para o atributo, o que faz com que ele seja capaz de preencher os dados já existentes com a mensagem padrão. 
 
 
@@ -68,3 +68,25 @@ add column idcurso int first;
 alter table cursos
 add primary key(idcurso);
 describe cursos;
+
+-- Para apagar a tabela cursos; 
+create table if not exists teste_apagar(
+id varchar(45) NOT NULL default '', 
+teste text
+)default charset = utf8;
+
+INSERT INTO teste_apagar value ('1','nome'), ('2', 'godofredozinho'); 
+
+drop table if exists teste_apagar;
+
+/*
+DDL - Data definition language: 
+- Create Database; 
+- Create Table; 
+- Alter table; 
+
+
+DML - Data manipulation language: 
+- 
+
+*/
