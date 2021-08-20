@@ -19,4 +19,9 @@ select * from pessoas;
 -- Se desejas que a nova coluna seja o primeiro campo da tabela, deves: 
 alter table pessoas 
 add column cpf int first;
+-- Se não por nada, ele considera a posição como última. 
+-- ***IMPORTANTE*** 
+-- A palavra column pode ser suprimida sem prejuízo ao código; 
+
+
  
