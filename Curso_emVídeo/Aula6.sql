@@ -84,9 +84,9 @@ DDL - Data definition language:
 - Create Database; 
 - Create Table; 
 - Alter table; 
-
+- drop table;
 
 DML - Data manipulation language: 
-- 
+- insert into 
 
 */
