@@ -63,3 +63,8 @@ ano year default '2016'
 -- Vamos adicionar a primary key; 
 alter table cursos 
 add column idcurso int first; 
+
+-- Agora: 
+alter table cursos
+add primary key(idcurso);
+describe cursos;
