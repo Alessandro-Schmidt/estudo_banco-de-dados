@@ -5,7 +5,7 @@ create database spotmidt;
 use spotmidt;
 
 create table Tb_User(
-cod_user int auto_increment not null, 
+cod_user int auto_increment not null unique, 
 nacionalidade varchar(25) not null default "Brasil",
 localizacao varchar(40) not null,
 país varchar(25) not null default "Brasil",
@@ -17,8 +17,17 @@ primary key(cod_user)
 
 
 create table Tb_Artista(
-cod_bandaartista int auto_increment not null,
+cod_bandaartista int auto_increment not null unique,
 nome_bandaartista varchar(40) not null,
 país_bandaartista varchar(40) not null default "Brasil",
 primary key(cod_bandaartista)
 )default charset=utf8;
+
+create table Tb_Musicas(
+cod_musicas int auto_increment not null unique,
+nome_musica varchar(40) not null,
+duracao_musica time,
+letra_música varchar(400) default "Indisponível",
+primary key (cod_musicas)
+)default charset=utf8;
+
