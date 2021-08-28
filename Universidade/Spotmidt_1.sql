@@ -31,8 +31,6 @@ letra_música varchar(400) default "Indisponível",
 primary key (cod_musica)
 )default charset=utf8;
 
-use spotmidt;
-
 create table Tb_Album(
 cod_album int auto_increment not null unique,
 nome_album varchar(40), 
@@ -44,7 +42,7 @@ foreign key (cod_bandaartista) references Tb_Artista(cod_bandaartista)
 create table Tb_Info_User(
 localizador_informacional int auto_increment not null unique,
 primary key(localizador_informacional),
-cod_user int, 
+cod_user int unique, 
 foreign key (cod_user) references Tb_User(cod_user)
 )default charset=utf8;
 
@@ -72,9 +70,21 @@ create table Tb_Download_Album(
 cod_download_album int auto_increment not null unique, 
 data_download_album date not null, 
 hora_download_album time not null, 
-cod_album int unique,
-localizador_informacional int unique,
+cod_album int,
+localizador_informacional int,
 foreign key(cod_album) references Tb_Album(cod_album),
 foreign key(localizador_informacional) references Tb_Info_User(localizador_informacional)
 )default charset=utf8;
+
+create table Tb_Musicas_Favoritadas(
+cod_favoritamento int auto_increment not null unique,
+ data_favoritamento_musica date not null, 
+ hora_favoritamento_musica time not null, 
+ cod_musica int,
+ cod_bandaartista int,
+ localizador_informacional int,
+ foreign key (cod_musica) references Tb_Musica(cod_musica),
+ foreign key (cod_bandaartista) references Tb_Artista(cod_bandaartista),
+ foreign key(localizador_informacional) references Tb_Info_User(localizador_informacional)
+)default charset=utf8; 
 
