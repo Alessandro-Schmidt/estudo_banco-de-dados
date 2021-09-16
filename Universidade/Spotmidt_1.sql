@@ -6,7 +6,7 @@ use spotmidt;
 
 
 CREATE TABLE Tb_Nacionalidade (
-    cod_nacionalidade VARCHAR(20) PRIMARY KEY,
+    cod_nacionalidade INTEGER PRIMARY KEY,
     nacionalidade VARCHAR(20),
     UNIQUE (cod_nacionalidade, nacionalidade)
 );
@@ -23,15 +23,35 @@ CREATE TABLE Tb_User (
     cod_user VARCHAR(20) PRIMARY KEY UNIQUE,
     nome VARCHAR(15),
     sobrenome VARCHAR(20),
-    data_de_Nascimento DATE,
-    cod_cidade INTEGER,
-    cod_nacionalidade INTEGER
-    FOREIGN KEY (cod_cidade)REFERENCES Tb_Cidade(cod_cidade);
-    FOREIGN KEY (cod_nacionalidade) Tb_Nacionalidade(cod_nacionalidade);
+    data_de_Nascimento DATE
+);
+
+alter table Tb_User
+add column cod_nacionalidade int;
+
+alter table Tb_User
+add column cod_cidade int; 
+
+alter table Tb_User
+add foreign key (cod_nacionalidade)
+references Tb_Nacionalidade(cod_nacionalidade);
+
+alter table Tb_User
+add foreign key (cod_cidade)
+references Tb_Cidade(cod_cidade);
+    
+drop table Tb_User;
+
+
+
+CREATE TABLE Tb_Canal_Podcast (
+    cod_canal_podcast INTEGER PRIMARY KEY UNIQUE,
+    nome_do_canal VARCHAR(20),
+    descricao_do_canal VARCHAR(100),
+    cod_nacionalidade integer
 );
  
+alter table Tb_Canal_Podcast
+	add constraint fk_nacionalidade_podcast foreign key(cod_nacionalidade) references Tb_Nacionalidade(cod_nacionalidade);
 
  
-ALTER TABLE Tb_User ADD CONSTRAINT FK_Tb_User_4
-    FOREIGN KEY (cod_user, ???)
-    REFERENCES Tb_Nacionalidade (nacionalidade, ???);
