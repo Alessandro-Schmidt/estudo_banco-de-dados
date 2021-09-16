@@ -142,3 +142,43 @@ CREATE TABLE Tb_Album (
 ALTER TABLE Tb_Album ADD CONSTRAINT FK_artista_do_album
     FOREIGN KEY (cod_artista_banda)
     REFERENCES Tb_Artista_Banda(cod_artista_banda);
+    
+-- Tb Follow Artista
+
+CREATE TABLE Tb_Follow_Artista (
+    cod_follow_artista INTEGER PRIMARY KEY UNIQUE,
+    data_follow_artista DATE,
+    hora_follow_artista TIME,
+    cod_user INTEGER,
+    cod_artista_banda INTEGER
+);
+ 
+ALTER TABLE Tb_Follow_Artista ADD CONSTRAINT FK_follow_artista_usuario
+    FOREIGN KEY (cod_user)
+    REFERENCES Tb_User(cod_user);
+    
+ALTER TABLE Tb_Follow_Artista ADD CONSTRAINT FK_artista_seguido
+    FOREIGN KEY (cod_artista_banda)
+    REFERENCES Tb_Artista_Banda(cod_artista_banda);    
+    
+-- Tb musica favoritada
+
+CREATE TABLE Tb_Musica_Favoritada (
+    cod_favoritamento_musica INTEGER PRIMARY KEY UNIQUE,
+    data_favoritamento_musica DATE,
+    hora_favoritamento_musica TIME,
+    cod_usuario INTEGER,
+    cod_musica INTEGER
+);
+ 
+ALTER TABLE Tb_Musica_Favoritada ADD CONSTRAINT FK_favoritada_pelo_user
+    FOREIGN KEY (cod_user)
+    REFERENCES Tb_User(cod_user);
+    
+    
+    
+    
+    
+    
+    
+    
