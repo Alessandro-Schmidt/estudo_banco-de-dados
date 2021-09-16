@@ -117,3 +117,28 @@ CREATE TABLE Tb_Artista_Banda (
 ALTER TABLE Tb_Artista_Banda ADD CONSTRAINT FK_nacionalidade_artista
     FOREIGN KEY (cod_nacionalidade)
     REFERENCES Tb_Nacionalidade(cod_nacionalidade);
+    
+-- Tb musicas
+
+CREATE TABLE Tb_Musica (
+    cod_musica INTEGER PRIMARY KEY UNIQUE,
+    nome_da_musica VARCHAR(40),
+    duracao_da_musica TIME,
+    cod_artista_banda INTEGER
+);
+ 
+ALTER TABLE Tb_Musica ADD CONSTRAINT FK_artista_dono_musica
+    FOREIGN KEY (cod_artista_banda)
+    REFERENCES Tb_Artista_Banda(cod_artista_banda);
+    
+-- Tb Album 
+
+CREATE TABLE Tb_Album (
+    cod_album INTEGER PRIMARY KEY UNIQUE,
+    nome_do_album VARCHAR(40),
+    cod_artista_banda INTEGER
+);
+ 
+ALTER TABLE Tb_Album ADD CONSTRAINT FK_artista_do_album
+    FOREIGN KEY (cod_artista_banda)
+    REFERENCES Tb_Artista_Banda(cod_artista_banda);
