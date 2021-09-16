@@ -167,18 +167,51 @@ CREATE TABLE Tb_Musica_Favoritada (
     cod_favoritamento_musica INTEGER PRIMARY KEY UNIQUE,
     data_favoritamento_musica DATE,
     hora_favoritamento_musica TIME,
-    cod_usuario INTEGER,
+    cod_user INTEGER,
     cod_musica INTEGER
 );
- 
 ALTER TABLE Tb_Musica_Favoritada ADD CONSTRAINT FK_favoritada_pelo_user
     FOREIGN KEY (cod_user)
     REFERENCES Tb_User(cod_user);
+
+alter table Tb_Musica_Favoritada add constraint FK_musica_favoritada
+foreign key (cod_musica)
+references Tb_Musica(cod_musica);
+
+-- Tb Musica baixada
+
+CREATE TABLE Tb_Download_Musica (
+    cod_download_musica INTEGER PRIMARY KEY UNIQUE,
+    data_download_musica DATE,
+    hora_download_musica TIME,
+    cod_user INTEGER,
+    cod_musica INTEGER
+);
+ 
+ALTER TABLE Tb_Download_Musica ADD CONSTRAINT FK_usuario_download_musica
+    FOREIGN KEY (cod_user)
+    REFERENCES Tb_User(cod_user);
+    
+ALTER TABLE Tb_Download_Musica ADD CONSTRAINT FK_musica_baixada
+foreign key (cod_musica)
+references Tb_Musica(cod_musica);
     
     
+-- Tb Album baixado
+
+CREATE TABLE Tb_Album_Baixado (
+    cod_download_album INTEGER PRIMARY KEY UNIQUE,
+    data_download_album DATE,
+    hora_download_album TIME,
+    cod_user INTEGER,
+    cod_album INTEGER
+);
+ 
+ALTER TABLE Tb_Album_Baixado ADD CONSTRAINT FK_baixado_pelouser
+    FOREIGN KEY (cod_user)
+    REFERENCES Tb_User(cod_user);
     
-    
-    
-    
-    
+ALTER TABLE Tb_Album_Baixado ADD CONSTRAINT FK_album_baixado
+    FOREIGN KEY (cod_album)
+    REFERENCES Tb_Album(cod_album);
     
