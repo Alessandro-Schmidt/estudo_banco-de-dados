@@ -215,3 +215,7 @@ ALTER TABLE Tb_Album_Baixado ADD CONSTRAINT FK_album_baixado
     FOREIGN KEY (cod_album)
     REFERENCES Tb_Album(cod_album);
     
+    
+    
+describe Tb_Canal_Podcast;
+    
