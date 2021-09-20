@@ -35,4 +35,25 @@ update cursos
 set carga = '30'
 where ano = '2018'; -- Este comando não funciona por causa do MySQL Workbench.
 
+-- Deletando linhas: 
+
+delete from cursos 
+where idcurso='21'; 
+
+delete from cursos 
+where idcurso='20'; 
+
+delete from cursos 
+where idcurso='19'; 
+
+delete from cursos 
+where ano='2018';
+
+-- Apagando todos os registros de uma tabela: 
+truncate table cursos; 
+
+-- ou 
+
+truncate cursos; 
+
 
