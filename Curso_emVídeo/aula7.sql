@@ -18,3 +18,21 @@ insert into cursos values
 ('20', 'Cozinha Árabe', 'Aprenda a fazer comidas do oriente','40', '30', '2019'),
 ('21', 'YouTuber', 'Gerando Intrigas com o YouTube','5', '2', '2018');
 
+
+update cursos 
+set nome = 'HTML5 aulas complementares' 
+where idcurso = '12'; 
+
+update cursos
+set nome = 'PHP', ano = '2019'
+where idcurso=  '15'; 
+
+update cursos
+set nome = 'Java aulas', ano = '2001'
+where idcurso = '16';
+
+update cursos 
+set carga = '30'
+where ano = '2018'; -- Este comando não funciona por causa do MySQL Workbench.
+
+
