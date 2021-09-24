@@ -254,7 +254,56 @@ insert into Tb_Cidade values
 
 select * from Tb_Cidade;
 
--- População de 
+-- População de Nacionalidades: 
+
+insert into Tb_Nacionalidade values
+('1', 'Brazilian'),
+('2', 'American'),
+('3', 'British'),
+('4', 'German'),
+('5', 'Japanese'),
+('6', 'Chinese'),
+('7', 'French'),
+('8', 'Italian'),
+('9', 'Swiss'),
+('10', 'Belgian'),
+('11', 'Estonian'),
+('12', 'Russian'),
+('13', 'Chinese'),
+('14', 'Spanish');
+
+
+insert into Tb_User values
+('1', ''),
+('2', ''),
+('3', ''),
+('4', ''),
+('5', ''),
+('6', ''),
+('7', ''),
+('8', ''),
+('9', ''),
+('10', ''),
+('11', ''),
+('12', ''),
+('13', ''),
+('14', ''),
+('15', ''),
+('16', ''),
+('17', ''),
+('18', ''),
+('19', ''),
+('20', ''),
+('21', ''),
+('22', ''),
+('23', ''),
+('24', ''),
+('25', ''),
+('26', ''),
+('27', ''),
+('28', ''),
+('29', '');
+
 /*
 Fim do código.
 */
