@@ -8,10 +8,10 @@ use spotmidt;
 
 CREATE TABLE Tb_Nacionalidade (
     cod_nacionalidade INTEGER PRIMARY KEY,
-    nacionalidade VARCHAR(20),
-    UNIQUE (cod_nacionalidade, nacionalidade)
+    nacionalidade VARCHAR(20)
 );
-
+drop table Tb_Nacionalidade; 
+use spotmidt;
 -- Tb cidade
 
 CREATE TABLE Tb_Cidade (
