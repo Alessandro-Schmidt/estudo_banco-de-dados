@@ -15,7 +15,8 @@ CREATE TABLE Tb_Nacionalidade (
 
 CREATE TABLE Tb_Cidade (
     cod_cidade INTEGER PRIMARY KEY UNIQUE,
-    nome_da_cidade VARCHAR(20)
+    nome_da_cidade VARCHAR(20),
+    nome_do_pais varchar(20)
 );
 
 -- tb user
@@ -218,6 +219,42 @@ ALTER TABLE Tb_Album_Baixado ADD CONSTRAINT FK_album_baixado
 População das tabelas: 
 */    
 
+-- População de cidades: 
+insert into Tb_Cidade values
+('1', 'Curitiba', 'Brazil'),
+('2', 'São Paulo', 'Brazil'), 
+('3', 'Belo Horizonte', 'Brazil'),
+('4', 'Brasília', 'Brazil'), 
+('5', 'Porto Alegre', 'Brazil'),
+('6', 'Florianópolis', 'Brazil'),
+('7', 'Chapecó', 'Brazil'),
+('8', 'New York', 'USA'),
+('9', 'Chicago', 'USA'),
+('10', 'London', 'UK'),
+('11', 'Barcelona', 'Spain'),
+('12', 'Madrid', 'Spain'), 
+('13', 'Berlin', 'Germany'),
+('14', 'Munich', 'Germany'),
+('15', 'Geneve', 'Switzerland'),
+('16', 'Moscow', 'Russia'), 
+('17', 'Tokyo', 'Japan'),
+('18', 'Shanghai', 'China'),
+('19', 'Miami', 'USA'),
+('20', 'San Francisco', 'USA'), 
+('21', 'Los Angeles', 'USA'),
+('22', 'Hueston', 'USA'),
+('23', 'Phoenix', 'USA'),
+('24', 'San Diego', 'USA'),
+('25', 'Dallas', 'USA'), 
+('26', 'Paris', 'France'),
+('27', 'Bern', 'Switzerland'),
+('28', 'Brussels', 'Belgium'),
+('29', 'Tallin', 'Estonia'),
+('30', 'Rome', 'Italy');
+
+select * from Tb_Cidade;
+
+-- População de 
 /*
 Fim do código.
 */
