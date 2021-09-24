@@ -10,8 +10,7 @@ CREATE TABLE Tb_Nacionalidade (
     cod_nacionalidade INTEGER PRIMARY KEY,
     nacionalidade VARCHAR(20)
 );
-drop table Tb_Nacionalidade; 
-use spotmidt;
+
 -- Tb cidade
 
 CREATE TABLE Tb_Cidade (
@@ -213,8 +212,12 @@ ALTER TABLE Tb_Album_Baixado ADD CONSTRAINT FK_baixado_pelouser
     
 ALTER TABLE Tb_Album_Baixado ADD CONSTRAINT FK_album_baixado
     FOREIGN KEY (cod_album)
-    REFERENCES Tb_Album(cod_album);
+    REFERENCES Tb_Album(cod_album);	
     
+/*
+População das tabelas: 
+*/    
+
 /*
 Fim do código.
 */
