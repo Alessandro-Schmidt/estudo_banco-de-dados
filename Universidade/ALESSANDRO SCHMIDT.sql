@@ -272,6 +272,7 @@ insert into Tb_Nacionalidade values
 ('13', 'Chinese'),
 ('14', 'Spanish');
 
+-- População da tabela Tb_User
 
 insert into Tb_User values
 ('1', 'Alessandro', 'Schmidt', '2001-04-28', '3', '10'),
@@ -321,6 +322,33 @@ insert into Tb_User values
 ('45', 'Leia', 'Skywalker', '1978-07-19', '10', '28');
 
 select * from Tb_User;
+
+-- População Tb_Artista
+
+insert into Tb_Artista_Banda values
+('1', 'The Beatles', '3'),
+('2', 'Rolling Stones', '3'),
+('3', 'Paul McCartney', '3'), 
+('4', 'Chico Buarque', '1'),
+('5', 'Titãs', '1'),
+('6', 'Legião Urbana', '1'), 
+('7', 'Selvagens a Procura da Lei', '1'),
+('8', 'Resgate', '1'),
+('9', 'The Red Army Choir', '12'),
+('10', 'Feduk', '12'),
+('11', 'Die Lieferaten','4'),
+('12', 'Miksu', '4'),
+('13', 'Marteria', '4'),
+('14', 'Jupiter Jones', '4'),
+('15','Revolverhead','4'),
+('16', 'Laith Al-Deen', '4'),
+('17','Tim Bendzko','4'),
+('18','Oasis','3'),
+('19','The Who','3'),
+('20', 'Pink Floyd', '3'),
+('21','Jimi Hendrix','');
+
+
 
 
 /*
