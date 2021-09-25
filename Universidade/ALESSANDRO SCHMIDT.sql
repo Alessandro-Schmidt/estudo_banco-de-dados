@@ -346,7 +346,17 @@ insert into Tb_Artista_Banda values
 ('18','Oasis','3'),
 ('19','The Who','3'),
 ('20', 'Pink Floyd', '3'),
-('21','Jimi Hendrix','');
+('21','Jimi Hendrix','2'),
+('22','Bob Dylan','2'),
+('23','Bruce Springsteen','2'),
+('24','Green Day','2'),
+('25','Aerosmith','2'),
+('26','Guns N Roses','2'),
+('27','Simon & Garfunkel','2'),
+('28','Eagles','2'),
+('29','Mark Foster','4'),
+('30','Paralamas do Sucesso','1'),
+('31','Queen','3');
 
 
 
