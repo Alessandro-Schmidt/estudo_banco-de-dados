@@ -13,6 +13,24 @@ order by nome;
 
 -- Ordem alfabética invertida: 
 select * from cursos 
-order by nome desc; 
+order by nome desc; -- Descendent 
 
--- 
+-- selecionando algumas colunas: 
+select nome, carga, ano from 
+cursos order by nome;
+
+-- mudando sequência e mudando a ordenação: 
+
+select ano, nome, carga from cursos 
+order by ano;
+
+-- adicionando mais uma ordenação alfabética para cada ano; 
+
+select ano, nome, carga from cursos order by ano, nome; 
+
+-- filtrando linhas: 
+
+select * from cursos 
+where ano = '2016'
+order by idcurso; 
+
