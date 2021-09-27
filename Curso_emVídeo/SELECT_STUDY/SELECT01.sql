@@ -34,3 +34,30 @@ select * from cursos
 where ano = '2016'
 order by idcurso; 
 
+-- Selecionando valores: 
+select nome, descricao,ano from cursos
+where ano <= 2016
+order by ano, nome; 
+
+-- Setando um range de valores: 
+select * from cursos 
+where totaulas between 20 and 30
+order by totaulas;
+
+select nome, ano from cursos 
+where ano between 2014 and 2016
+order by ano desc, nome;
+
+-- in 
+
+select nome, descricao, ano from cursos 
+where ano in (2014, 2016)
+order by ano; 
+
+-- selecionando ainda mais valores
+
+select nome, carga, totaulas from cursos 
+where carga > 35 and totaulas<30
+order by totaulas desc;
+
+-- SELECT = DQL (Data query Language)
