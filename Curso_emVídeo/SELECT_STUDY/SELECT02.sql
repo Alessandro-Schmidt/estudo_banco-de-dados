@@ -23,3 +23,11 @@ order by nacionalidade;
 select count(*) from cursos; 
 
 select count(*) from cursos where carga > 40; 
+
+-- MAX 
+select max(carga) from cursos; 
+
+select max(totaulas) from cursos where ano = '2016'; 
+
+-- MIN 
+select nome, min(totaulas) from cursos;
