@@ -48,4 +48,23 @@ having carga > (select avg(carga) from cursos); -- Só aparece quem tem uma carg
 select distinct profissao, count(*) from gafanhotos 
 group by profissao; 
 
--- EX2 - 
+-- EX2 - Lista de quantos homens e mulheres nasceram depois de 2005
+select sexo, count(*) from gafanhotos
+where nascimento > '2005-01-01'
+group by sexo; 
+
+-- EX3 - Lista dos países e quantos aluos existem, tirando o brasil
+select distinct nacionalidade, count(*) from gafanhotos
+where nacionalidade<>'Brasil'
+group by nacionalidade
+having count(nacionalidade)>3; 
+
+-- EX4 - Exercicio complexo demais
+select avg(altura) from gafanhotos; 
+
+-- Segunda parte: 
+select * from gafanhotos 
+where peso > 100
+having altura >(select avg(altura) from gafanhotos)
+order by altura; 
+
