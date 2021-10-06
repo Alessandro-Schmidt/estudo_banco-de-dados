@@ -380,6 +380,77 @@ INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_ba
 INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('18', 'Champagnat Supernova', '18');
 INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('19', 'Who are you', '19');
 INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('20', 'The Wall', '20');
+
+
+-- População da Tabela Música
+select * from Tb_Musica;
+desc Tb_Musica;
+insert into Tb_Musica values
+('1', 'Help', '', '1'),
+('2', 'Star me up', '', '2'),
+('3', 'Brazil', '', '3'),
+('4', 'Construção', '', '4'),
+('5', 'AA UU', '', '5'),
+('6', 'Ainda é cedo', '', '6'),
+('7', 'Tropa da Elite', '', '7'),
+('8', 'Meu caminho', '', '8'),
+('9', 'Smuglianka', '', '9'),
+('10', 'Trabuji', '', '10'),
+('11', 'Eine neue Klasse', '', '11'),
+('12', 'Wirkstein', '', '12'),
+('13', 'Kids', '', '13'),
+('14', 'In die Nähe', '', '14'),
+('15', '38 miles', '', '15'),
+('16', 'Dies ist dein lied', '', '16'),
+('17', 'Neu In DE', '', '17'),
+('18', 'Wonderwall', '', '18'),
+('19', 'Main_The_Who', '', '19'),
+('20', 'Time', '', '20'),
+('21', 'Cocaine', '', '21'),
+('22', 'Like a Rolling', '', '22'),
+('23', 'Born in the USA', '', '23'),
+('24', 'American Idiot', '', '24'),
+('25', 'Crazy', '', '25'),
+('26', 'Welcome to the', '', '26'),
+('27', 'Hello Darkness', '', '27'),
+('28', 'Hotel California', '', '28'),
+('29', 'Au Revoir', '', '29'),
+('30', 'Laterna dos afogados', '', '30'),
+('31', 'Bohemia Rapsody', '', '31'),
+('32', 'Hey Jude', '', '1'),
+('33', 'I can Get No', '', '2'),
+('34', 'Once upon a time', '', '3'),
+('35', 'Jogo de bola', '', '4'),
+('36', 'Mundo cão', '', '5'),
+('37', 'Tempo perdido', '', '6'),
+('38', 'Massarandupió', '', '4'),
+('39', 'Amantes', '', '4'),
+('40', 'Relter Skelter', '', '1'),
+('41', 'Norweigian Wood', '', '1'),
+('42', 'Andere Deutsch', '', '11'),
+('43', 'jorge Maravilha', '', '4'),
+('44', 'Die Haus ist forbei', '', '13'),
+('45', 'Die fünfte Beatle', '', '13'),
+('46', 'Retrato em preto e branco', '', '4'),
+('47', 'You wont see me', '', '1'),
+('48', 'Licht Zimmer', '', '13'),
+('49', 'Theres a Light', '', '18'),
+('50', 'Die Tropftremmer', '', '13'),
+('51', 'Aquela menina', '', '4'),
+('52', 'Se eu soubesse', '', '4'),
+('53', 'Tax Man', '', '1'),
+('54', 'Lucy in the Sky', '', '1'),
+('55', 'Paratodos', '', '4'),
+('56', 'Eu te amo', '', '4'),
+('57', 'In my life', '', '1'),
+('58', 'Hello Goodbye', '', '1'),
+('59', 'Back in the USSR', '', '1'),
+('60', 'Girl', '', '1'),
+('61', 'Nowhere man ', '', '1');
+
+-- População da TB_musica_favoritada
+desc Tb_Musica_Favoritada;
+
 /*
 Fim do código.
 */
