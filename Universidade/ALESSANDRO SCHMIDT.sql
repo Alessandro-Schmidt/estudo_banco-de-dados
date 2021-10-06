@@ -358,9 +358,28 @@ insert into Tb_Artista_Banda values
 ('30','Paralamas do Sucesso','1'),
 ('31','Queen','3');
 
-
-
-
+-- População da tabela Tb_Album
+select * from Tb_Album;
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('1', 'Rubber Soul', '1');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('2', 'Tatoo You', '2');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('3', 'New', '3');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('4', 'Caravanas', '4');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('5', 'Cabeça Dinossauro', '5');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('6', 'Que país é esse?', '6');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('7', 'Aprendendo a mentir', '7');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('8', 'Este lado para cima', '8');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('9', 'Songs of war', '9');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('10', 'Zanadyie', '10');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('11', 'Die Lieferaten - live', '11');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('12', 'Roundtrip', '12');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('13', 'Lila Wolkeln', '13');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('14', 'Raum um Raum', '14');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('15', 'Tropfmeist', '15');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('16', 'Deutsch Akustik: Herr Laith', '16');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('17', 'Bendzko: Live MTV', '17');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('18', 'Champagnat Supernova', '18');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('19', 'Who are you', '19');
+INSERT INTO `spotmidt`.`Tb_Album` (`cod_album`, `nome_do_album`, `cod_artista_banda`) VALUES ('20', 'The Wall', '20');
 /*
 Fim do código.
 */

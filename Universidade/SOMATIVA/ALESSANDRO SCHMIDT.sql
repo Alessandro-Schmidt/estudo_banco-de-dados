@@ -202,9 +202,6 @@ R:
 
 -- Questão 4: 
 -- 1ª pergunta: 
-select * from medico;
-use hospital; 
-
 select distinct c.crm_medico ,m.nome_medico, count(c.crm_medico) 
 from consulta as c inner join medico as m
 on c.crm_medico = m.crm
