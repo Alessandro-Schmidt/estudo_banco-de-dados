@@ -909,7 +909,35 @@ INSERT INTO Tb_Canal_Podcast values
 ('12', 'Freedom Radio', 'Podcast Eesti ajaloost ja vabadusvõitlusest.', '11'),
 ('13', 'Un nuevo dia', 'Un podcast que habla sobre las notícias de toda la Europa', '14');
 
--- 
+-- População Tb_Episodios_Podcast
+desc Tb_Episodios_Podcast; 
+select * from Tb_Episodios_Podcast; 
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('1', 'Rodada 01', '01:23:00', '1');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('2', 'Rodada 02', '02:25:23', '1');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('3', 'Histórias de Seleção', '03:04:01', '2');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('4', 'Histórias do Vanpeta', '00:49:10', '2');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('5', 'Salmos', '1:9:3', '3');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('6', 'O evangelho', '1:5:34', '3');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('7', 'Inglorious Day: 09/11 perspective', '01:01:01', '4');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('8', 'New Politics', '00:15:13', '4');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('9', 'Grown Ups: best movie', '10:03:11', '5');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('10', 'Adam Sandler Interview', '03:10:15', '5');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('11', 'Die Wahl ', '01:02:13', '6');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('12', 'Guten Apetit!', '05:14:11', '6');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('13', 'Deutsche Akzent ', '1:1:3', '7');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('14', 'Gescwendigkeitsbegrenzung', '02:11:55', '7');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('15', 'London Now ep1 ', '00:55:19', '8');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('16', 'Technology in the UK', '00:49:59', '9');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('17', 'Queens New Hat', '00:14:49', '10');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('18', 'King Charles', '01:09:11', '10');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('19', 'History of the UK ', '03:11:12', '10');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('20', 'UKS best universities', '00:49:50', '10');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('21', 'Great day today', '01:00:19', '10');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('22', 'Queen Elizabeth', '00:33:27', '10');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('23', 'England, UK and Commonwealth', '00:15:19', '10');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('24', 'Mangia Bene', '02:09:14', '11');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('25', 'Tallin und Europa', '03:11:45', '12');
+INSERT INTO `spotmidt`.`Tb_Episodios_Podcast` (`cod_episodio_podcast`, `titulo_do_episodio_podcast`, `duracao_do_episodio_podcast`, `cod_canal_podcast`) VALUES ('26', 'Banco de dados, una realidad', '00:59:59', '13');
 
 /*
 Fim do código.
