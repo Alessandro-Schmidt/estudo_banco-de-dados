@@ -893,7 +893,23 @@ insert into Tb_Follow_Artista values
 -- PODCASTS
 -- População Tb_Canal_Podcast
 desc Tb_Canal_Podcast;
+select * from Tb_Canal_Podcast; 
+INSERT INTO Tb_Canal_Podcast values
+('1', 'Bons de bola', 'Bate papo sobre jogos do Brasileirão', '1'),
+('2', 'Amigos para vida', 'Um bate papo do Vampeta com o Edilson, ex jogadores, sobre temas da atualidade', '1'),
+('3', 'Biblia hoje', 'Um respiro de paz na sua semana', '1'),
+('4', 'Joe Roegan', 'Americas favorite comedian, now in Podcast', '2'),
+('5', 'Quentinn and etc', 'The famous director Tarantino talks about new movies', '2'),
+('6', 'Deutsche Welle', 'Jeden Tag, Neuigkeit und Humor', '4'),
+('7', 'DeutscheTag', 'Alles über DE Politik und Wirtschaft ', '4'),
+('8', 'Daily Mail ', 'Englands oldest media', '3'),
+('9', 'Imperial Radio', 'UKs favorite podcast about history', '3'),
+('10', 'Queens Daily News', 'News about the Royal Family', '3'),
+('11', 'Tv Rai Italia ', 'Un podcast sui paesi di lingua italiana', '8'),
+('12', 'Freedom Radio', 'Podcast Eesti ajaloost ja vabadusvõitlusest.', '11'),
+('13', 'Un nuevo dia', 'Un podcast que habla sobre las notícias de toda la Europa', '14');
 
+-- 
 
 /*
 Fim do código.
