@@ -902,8 +902,8 @@ insert into Tb_Follow_Artista values
 ('87', '2021-4-1', '5:1:32', '17', '2'),
 ('88', '2021-4-1', '6:1:33', '18', '2'),
 ('89', '2021-5-1', '7:1:34', '19', '2'),
-('90', '2021-5-1', '8:1:35', '20', '2'); 
-
+('90', '2021-5-1', '8:1:35', '20', '2'),
+('91','2021-5-1', '8:1:35', '20', '11'); 
 
 -- PODCASTS
 -- População Tb_Canal_Podcast
@@ -1209,12 +1209,19 @@ on b.cod_album = a.cod_album
 group by b.cod_album 
 order by count(b.cod_album) desc
 limit 1;
+-- 7ª: Qual a banda mais seguida da Alemanha?  (Dia Lieferaten - 5 follows)
+desc Tb_Nacionalidade;
+desc Tb_Artista_Banda;
+select b.nome_da_banda, p.nacionalidade ,count(f.cod_artista_banda) 
+from Tb_Follow_Artista as f join Tb_Artista_Banda as b join Tb_Nacionalidade as p
+on f.cod_artista_banda = b.cod_artista_banda and p.cod_nacionalidade = b.cod_nacionalidade 
+where p.nacionalidade = "German"
+group by f.cod_artista_banda
+order by count(f.cod_artista_banda) desc
+limit 1;
+-- 8ª:  Qual a cidade com mais usuários?
 
 /*
-    Qual a banda mais seguida do UK (United Kingdom – Reino Unido)?  
-
-    Qual a cidade com mais usuários?  
-
     Qual o álbum mais famoso (mais downloads) da banda mais seguida do UK? 
 
 	Qual a música de Artista brasileiro mais escutada?   
