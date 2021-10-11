@@ -1159,6 +1159,44 @@ insert into Tb_Podcast_Episodio_Baixado values
 ('104', '2021-5-1', '14:3:49', '13', '10'),
 ('105', '2021-5-1', '14:4:50', '43', '10'); 
 
+-- Informações a serem extraídas: 
+
+-- 1ª:  Qual o número de usuários cadastrados na plataforma;  
+select count(cod_user) from Tb_User; 
+-- 2ª: Quantos usuários possuem mais de 30 anos de idade;  
+select count(cod_user) from Tb_User
+where data_de_Nascimento between '1900-01-01' and '1991-12-30'; 
+-- 3ª:  Qual a música mais favoritada;
+
+
+
+/*
+     
+
+    Qual a música com mais downloads;  
+
+    Qual o Artista/Banda mais seguido?  
+
+    Qual o álbum com mais downloads?  
+
+    Qual a banda mais seguida do UK (United Kingdom – Reino Unido)?  
+
+    Qual a cidade com mais usuários?  
+
+    Qual o álbum mais famoso da banda mais seguida do UK? 
+
+     Qual a música de Artista brasileiro mais escutada?   
+
+    Qual o dia do mês de agosto em que os usuários mais baixaram álbuns?  
+
+    Qual a hora que os usuários mais seguem novos artistas?  
+
+    Qual a banda mais seguida em São Paulo?  
+
+    Qual o podcast com mais assinantes?  
+
+    Qual o episódio mais baixado de um podcast nacional?  
+*/
 
 /*
 Fim do código.
