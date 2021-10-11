@@ -1224,11 +1224,16 @@ on c.cod_cidade = u.cod_cidade
 group by u.cod_cidade
 order by count(u.cod_cidade) desc
 limit 1;
--- Qual o álbum mais famoso (mais downloads) da banda mais seguida do UK? 
+-- 9º Qual a música de Artista brasileiro mais favoritada? (Construção - Chico Buarque - 6 favoritamentos)
+select m.nome_da_musica, a.nome_da_banda ,n.nacionalidade, count(f.cod_musica)
+from Tb_Musica_Favoritada as f join Tb_Nacionalidade as n join Tb_Musica as m join Tb_Artista_Banda as a
+on m.cod_musica = f.cod_musica and a.cod_nacionalidade = n.cod_nacionalidade and a.cod_artista_banda = m.cod_artista_banda
+where n.nacionalidade = 'Brazilian'
+group by f.cod_musica
+order by count(f.cod_musica) desc
+limit 1; 
 /*
-	Qual a música de Artista brasileiro mais escutada?   
-
-    Qual o dia do mês de agosto em que os usuários mais baixaram álbuns?  
+	Qual o dia do mês de agosto em que os usuários mais baixaram álbuns?  
 
     Qual a hora que os usuários mais seguem novos artistas?  
 
