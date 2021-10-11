@@ -1240,9 +1240,17 @@ where c.nome_da_cidade = 'London'
 group by f.cod_artista_banda
 order by count(f.cod_artista_banda) desc 
 limit 1; 
--- 11ª: Qual o podcast com mais assinantes?  
+-- 11ª: Qual o podcast com mais assinantes? Sobre o quê ele fala?
+select c.nome_do_canal, c.descricao_do_canal ,count(f.cod_canal_podcast)
+from Tb_Follow_Canal_Podcast as f join Tb_Canal_Podcast as c 
+on c.cod_canal_podcast = f.cod_canal_podcast
+group by f.cod_canal_podcast
+order by count(f.cod_canal_podcast) desc
+limit 1;
+-- 12º: Qual o episódio mais baixado de um podcast nacional?  
+select
 /*
-    Qual o episódio mais baixado de um podcast nacional?  
+    
 */
 
 /*
