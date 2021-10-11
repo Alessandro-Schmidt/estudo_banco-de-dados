@@ -1196,24 +1196,26 @@ group by d.cod_musica
 order by count(d.cod_musica) desc
 limit 1;
 -- 5ª: Qual o Artista/Banda mais seguido?  (Rolling Stones - 18 follows)
-desc Tb_Artista_Banda;
-desc Tb_Follow_Artista;
 select b.nome_da_banda, count(f.cod_artista_banda) 
 from Tb_Follow_Artista as f join Tb_Artista_Banda as b
 on f.cod_artista_banda = b.cod_artista_banda
 group by f.cod_artista_banda
 order by count(f.cod_artista_banda) desc
 limit 1; 
-
+-- 6ª: Qual o álbum com mais downloads?
+select a.nome_do_album, count(b.cod_album)
+from Tb_Album_Baixado as b join Tb_Album as a
+on b.cod_album = a.cod_album
+group by b.cod_album 
+order by count(b.cod_album) desc
+limit 1;
 
 /*
-    Qual o álbum com mais downloads?  
-
     Qual a banda mais seguida do UK (United Kingdom – Reino Unido)?  
 
     Qual a cidade com mais usuários?  
 
-    Qual o álbum mais famoso da banda mais seguida do UK? 
+    Qual o álbum mais famoso (mais downloads) da banda mais seguida do UK? 
 
 	Qual a música de Artista brasileiro mais escutada?   
 
