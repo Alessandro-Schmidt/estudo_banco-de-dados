@@ -1202,7 +1202,7 @@ on f.cod_artista_banda = b.cod_artista_banda
 group by f.cod_artista_banda
 order by count(f.cod_artista_banda) desc
 limit 1; 
--- 6ª: Qual o álbum com mais downloads?
+-- 6ª: Qual o álbum com mais downloads? (Rubber Soul - 45 downloads) 
 select a.nome_do_album, count(b.cod_album)
 from Tb_Album_Baixado as b join Tb_Album as a
 on b.cod_album = a.cod_album
@@ -1210,8 +1210,6 @@ group by b.cod_album
 order by count(b.cod_album) desc
 limit 1;
 -- 7ª: Qual a banda mais seguida da Alemanha?  (Dia Lieferaten - 5 follows)
-desc Tb_Nacionalidade;
-desc Tb_Artista_Banda;
 select b.nome_da_banda, p.nacionalidade ,count(f.cod_artista_banda) 
 from Tb_Follow_Artista as f join Tb_Artista_Banda as b join Tb_Nacionalidade as p
 on f.cod_artista_banda = b.cod_artista_banda and p.cod_nacionalidade = b.cod_nacionalidade 
@@ -1219,11 +1217,15 @@ where p.nacionalidade = "German"
 group by f.cod_artista_banda
 order by count(f.cod_artista_banda) desc
 limit 1;
--- 8ª:  Qual a cidade com mais usuários?
-
+-- 8ª:  Qual a cidade com mais usuários? (London - 12 usuários)
+select c.nome_da_cidade, count(u.cod_cidade) 
+from Tb_Cidade as c join Tb_User as u
+on c.cod_cidade = u.cod_cidade
+group by u.cod_cidade
+order by count(u.cod_cidade) desc
+limit 1;
+-- Qual o álbum mais famoso (mais downloads) da banda mais seguida do UK? 
 /*
-    Qual o álbum mais famoso (mais downloads) da banda mais seguida do UK? 
-
 	Qual a música de Artista brasileiro mais escutada?   
 
     Qual o dia do mês de agosto em que os usuários mais baixaram álbuns?  
