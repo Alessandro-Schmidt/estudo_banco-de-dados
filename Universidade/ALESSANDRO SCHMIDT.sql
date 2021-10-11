@@ -555,7 +555,22 @@ insert into Tb_Musica_Favoritada values
 ('102', '2021-7-1', '13:1:47', '40', '1'),
 ('103', '2021-7-1', '13:2:48', '40', '2'),
 ('104', '2021-7-1', '14:3:49', '40', '3'),
-('105', '2021-8-1', '14:4:50', '40', '14');
+('105', '2021-8-1', '14:4:50', '40', '14'),
+('106', '2021-8-1', '14:4:51', '38', '14'),
+('107', '2021-8-1', '14:4:51', '2', '14'),
+('108', '2021-8-1', '14:4:51', '3', '14'),
+('109', '2021-8-1', '14:4:51', '4', '14'),
+('110', '2021-8-1', '14:4:51', '5', '14'),
+('111', '2021-8-1', '14:4:51', '6', '14'),
+('112', '2021-8-1', '14:4:51', '7', '14'),
+('113', '2021-8-1', '14:4:51', '8', '14'),
+('114', '2021-8-1', '14:4:51', '9', '14'),
+('115', '2021-8-1', '14:4:51', '10', '14'),
+('116', '2021-8-1', '14:4:51', '11', '14'),
+('117', '2021-8-1', '14:4:51', '12', '14'),
+('118', '2021-8-1', '14:4:51', '13', '14'),
+('119', '2021-8-2', '14:4:52', '14', '14');
+
 select * from Tb_Musica_Favoritada;
 
 -- População Tb_Download_Musica
@@ -1161,20 +1176,29 @@ insert into Tb_Podcast_Episodio_Baixado values
 
 -- Informações a serem extraídas: 
 
--- 1ª:  Qual o número de usuários cadastrados na plataforma;  
+-- 1ª:  Qual o número de usuários cadastrados na plataforma;  (45 usuários)
 select count(cod_user) from Tb_User; 
--- 2ª: Quantos usuários possuem mais de 30 anos de idade;  
+-- 2ª: Quantos usuários possuem mais de 30 anos de idade; (21 usuários) 
 select count(cod_user) from Tb_User
 where data_de_Nascimento between '1900-01-01' and '1991-12-30'; 
--- 3ª:  Qual a música mais favoritada;
+-- 3ª:  Qual a música mais favoritada; (Música In die Nähe, com 23 favoritamentos)
+select m.nome_da_musica, count(f.cod_musica)
+from Tb_Musica_Favoritada as f join Tb_Musica as m
+on m.cod_musica = f.cod_musica
+group by m.cod_musica
+order by count(f.cod_musica) desc
+limit 1;
+-- 4ª: Qual a música com mais downloads; (Música Help, com 22 downloads)
+select m.nome_da_musica, count(d.cod_musica)
+from Tb_Download_Musica as d join Tb_Musica as m
+on m.cod_musica = d.cod_musica
+group by d.cod_musica 
+order by count(d.cod_musica) desc
+limit 1;
 
 
 
 /*
-     
-
-    Qual a música com mais downloads;  
-
     Qual o Artista/Banda mais seguido?  
 
     Qual o álbum com mais downloads?  
