@@ -1232,15 +1232,16 @@ where n.nacionalidade = 'Brazilian'
 group by f.cod_musica
 order by count(f.cod_musica) desc
 limit 1; 
+-- 10ª: Qual a banda mais seguida em Londres?  (Rolling Stones - 4 follows na cidade de usuários que residem em Londres) 
+select c.nome_da_cidade, a.nome_da_banda, count(f.cod_artista_banda)
+from Tb_Cidade as c join Tb_Artista_Banda as a join Tb_Follow_Artista as f join Tb_User as u 
+on c.cod_cidade = u.cod_cidade and u.cod_user = f.cod_user and f.cod_artista_banda = a.cod_artista_banda
+where c.nome_da_cidade = 'London'
+group by f.cod_artista_banda
+order by count(f.cod_artista_banda) desc 
+limit 1; 
+-- 11ª: Qual o podcast com mais assinantes?  
 /*
-	Qual o dia do mês de agosto em que os usuários mais baixaram álbuns?  
-
-    Qual a hora que os usuários mais seguem novos artistas?  
-
-    Qual a banda mais seguida em São Paulo?  
-
-    Qual o podcast com mais assinantes?  
-
     Qual o episódio mais baixado de um podcast nacional?  
 */
 
