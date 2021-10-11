@@ -1240,19 +1240,21 @@ where c.nome_da_cidade = 'London'
 group by f.cod_artista_banda
 order by count(f.cod_artista_banda) desc 
 limit 1; 
--- 11ª: Qual o podcast com mais assinantes? Sobre o quê ele fala?
+-- 11ª: Qual o podcast com mais assinantes? Sobre o quê ele fala? (Imperial Radio - UKS favorite podcast about history: 44 follows) 
 select c.nome_do_canal, c.descricao_do_canal ,count(f.cod_canal_podcast)
 from Tb_Follow_Canal_Podcast as f join Tb_Canal_Podcast as c 
 on c.cod_canal_podcast = f.cod_canal_podcast
 group by f.cod_canal_podcast
 order by count(f.cod_canal_podcast) desc
 limit 1;
--- 12º: Qual o episódio mais baixado de um podcast nacional?  
-select
-/*
-    
-*/
-
+-- 12º: Quais os três episódios mais baixados de um podcast nacional? (Histórias de Seleção, rodada 02 e rodada 01)
+select e.titulo_do_episodio_podcast, c.nome_do_canal, count(b.cod_episodio_podcast)
+from Tb_Podcast_Episodio_Baixado as b join Tb_Episodios_Podcast as e join Tb_Nacionalidade as n join Tb_Canal_Podcast as c 
+on b.cod_episodio_podcast = e.cod_episodio_podcast and n.cod_nacionalidade = c.cod_nacionalidade and c.cod_canal_podcast = e.cod_canal_podcast
+where n.nacionalidade = 'Brazilian'
+group by b.cod_episodio_podcast
+order by count(b.cod_episodio_podcast) desc
+limit 3;
 /*
 Fim do código.
 */
