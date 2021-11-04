@@ -208,3 +208,11 @@ Expressão:
 
 MATCHING UM<--(DISCIPLINAS as D) x d.cod_disc = pd.cod_disc (PROFESSORES DISCIPLINAS as PD), DISCIPLINAS |X| PROFESSORES DISCIPLINAS 
 */
+
+
+/*
+DIA 04/05/2021 -> Novas atividades: 
+3 - Qual o professor com mais aulas ministradas na história; 
+4 - Qual o ano com mais matérias lecionadas? 
+5 - 
+*/
