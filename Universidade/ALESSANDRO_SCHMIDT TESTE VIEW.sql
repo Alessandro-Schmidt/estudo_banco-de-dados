@@ -213,6 +213,51 @@ MATCHING UM<--(DISCIPLINAS as D) x d.cod_disc = pd.cod_disc (PROFESSORES DISCIPL
 /*
 DIA 04/05/2021 -> Novas atividades: 
 3 - Qual o professor com mais aulas ministradas na história; 
-4 - Qual o ano com mais matérias lecionadas? 
-5 - 
+4 - Qual matéria mais lecionada em 2005? 
+5 - Quantas vezes a matéria de 'Redes e sistemas distribuídos' foi lecionada? 
+*/
+
+/*
+3 - Qual o professor com mais aulas ministradas na história; 
+*/
+select p.nome_prof as 'professor', count(pd.cod_prof) as 'numero de vezes que ministrou' from PROFESSORES as p join PROFESSORES_DISCIPLINAS as pd
+on p.cod_prof = pd.cod_prof
+group by pd.cod_prof
+order by count(pd.cod_prof) desc
+limit 1; 
+
+/*
+Expressão AR: 
+Π p.nome_prof as 'professor', count(pd.cod_prof) as 'numero de vezes que ministrou'((PROFESSORES) as P !X! α p.cod_prof = pd.cod_prof (PROFESSORES_DISCIPLINAS) as PD)
+
+*/
+
+/*
+4 - Qual matéria mais lecionada em 2005? 
+*/
+select d.nome_disciplina, count(pd.cod_disc) from DISCIPLINAS as d join PROFESSORES_DISCIPLINAS as pd
+on d.cod_disc = pd.cod_disc
+where data_aula between '2004-12-31' and '2006-01-01'
+-- YEAR (data_aula) = '2005'
+group by pd.cod_disc
+order by count(pd.cod_disc) desc
+limit 1;
+
+/*
+EXPRESSÃO AR
+Π disciplinas.nome_disciplina, count(pd.cod_disc)(α data_aula between '2004-12-31' and '2006-01-01'((DISCIPLINAS) !X! disciplina.cod_disc = professor_disciplina.cod_disc (PROFESSORES_DISCIPLINAS)))
+*/
+
+/*
+5 - Quantas vezes a matéria de 'Arquitetura de Computadores' foi lecionada? 
+*/
+select d.nome_disciplina, count(pd.cod_disc) from DISCIPLINAS as d join PROFESSORES_DISCIPLINAS as pd
+on d.cod_disc = pd.cod_disc
+where d.nome_disciplina = 'arquitetura de computadores'
+group by pd.cod_disc
+order by count(pd.cod_disc) desc;
+
+/*
+EXPRESSÃO AR
+Π d.nome_disciplina, count(pd.cod_disc)(α where d.nome_disciplina = 'arquitetura de computadores' ((DISCIPLINAS) X d.cod_disc = pd.cod_disc (PROFESSORES_DISCIPLINAS)))
 */
