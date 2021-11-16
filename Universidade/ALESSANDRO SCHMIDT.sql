@@ -570,6 +570,8 @@ insert into Tb_Musica_Favoritada values
 ('117', '2021-8-1', '14:4:51', '12', '14'),
 ('118', '2021-8-1', '14:4:51', '13', '14'),
 ('119', '2021-8-2', '14:4:52', '14', '14');
+insert into Tb_Musica_Favoritada values('120', '2021-9-1', '13:5:3', '14', '2');
+insert into Tb_Musica_Favoritada values('121', '2021-9-1', '13:5:3', '14', '8');
 
 select * from Tb_Musica_Favoritada;
 
@@ -1248,6 +1250,10 @@ on m.cod_artista_banda = a.cod_artista_banda
 where m.cod_musica not in (select m.cod_musica from Tb_Musica_Favoritada as m) and m.cod_musica not in (select m.cod_musica from Tb_Download_Musica as m);
 
 
+-- 12ª: Qual o nome do canal de podcast brasileiro com o episodio mais baixado? e qual o nome do episodio? 
+-- Deve usar produto cartesiano envolvendo mais de três tabelas
+
+
 
 -- 13º: Quais os três episódios mais baixados de um podcast nacional? (Histórias de Seleção, rodada 02 e rodada 01)
 -- Join com três tabelas
@@ -1259,8 +1265,29 @@ group by b.cod_episodio_podcast
 order by count(b.cod_episodio_podcast) desc
 limit 3;
 
--- 15ª: 
+-- 14ª: Qual a música de artista brasileiro que possui mais de 5 downloads? (Música Construção do chico Buarque)
+-- Deve utilizar a cláusula 'having'
+select m.nome_da_musica, a.nome_da_banda
+from Tb_Musica as m inner join Tb_Artista_Banda as a join Tb_Nacionalidade as n join Tb_Download_Musica as d
+on a.cod_nacionalidade = n.cod_nacionalidade and m.cod_artista_banda = a.cod_artista_banda and d.cod_musica = m.cod_musica
+where n.nacionalidade = 'Brazilian'
+group by d.cod_musica
+having count(m.nome_da_musica)>5;
+
+-- 15ª: Quais as múscias que foram favoritadas mas que não foram baixadas? (música 'Meu caminho' da Banda Resgate)
 -- deve adotar a vizualização de views
+
+create view musicas_baixadas as
+select b.cod_musica from Tb_Download_Musica as b;
+
+select * from musicas_baixadas;
+
+select m.nome_da_musica, a.nome_da_banda
+from Tb_Musica as m inner join Tb_Musica_Favoritada as mf join Tb_Artista_Banda as a
+on m.cod_musica = mf.cod_musica and a.cod_artista_banda = m.cod_artista_banda
+where m.cod_musica not in (select * from musicas_baixadas);
+
+
 /*
 Fim do código.
 */
