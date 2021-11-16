@@ -1180,7 +1180,7 @@ insert into Tb_Podcast_Episodio_Baixado values
 select count(cod_user) from Tb_User; 
 -- 2ª: Quantos usuários possuem mais de 30 anos de idade; (21 usuários) 
 select count(cod_user) from Tb_User
-where data_de_Nascimento between '1900-01-01' and '1991-12-30'; 
+where data_de_Nascimento between '1900-01-01' and '1991-12-31'; 
 -- 3ª:  Qual a música mais favoritada; (Música In die Nähe, com 23 favoritamentos)
 select m.nome_da_musica, count(f.cod_musica)
 from Tb_Musica_Favoritada as f join Tb_Musica as m
@@ -1247,7 +1247,8 @@ on c.cod_canal_podcast = f.cod_canal_podcast
 group by f.cod_canal_podcast
 order by count(f.cod_canal_podcast) desc
 limit 1;
--- 12º: Quais os três episódios mais baixados de um podcast nacional? (Histórias de Seleção, rodada 02 e rodada 01)
+-- 13º: Quais os três episódios mais baixados de um podcast nacional? (Histórias de Seleção, rodada 02 e rodada 01)
+-- Join com três tabelas
 select e.titulo_do_episodio_podcast, c.nome_do_canal, count(b.cod_episodio_podcast)
 from Tb_Podcast_Episodio_Baixado as b join Tb_Episodios_Podcast as e join Tb_Nacionalidade as n join Tb_Canal_Podcast as c 
 on b.cod_episodio_podcast = e.cod_episodio_podcast and n.cod_nacionalidade = c.cod_nacionalidade and c.cod_canal_podcast = e.cod_canal_podcast
