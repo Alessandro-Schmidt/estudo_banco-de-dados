@@ -1240,13 +1240,15 @@ where c.nome_da_cidade = 'London'
 group by f.cod_artista_banda
 order by count(f.cod_artista_banda) desc 
 limit 1; 
--- 11ª: Qual o podcast com mais assinantes? Sobre o quê ele fala? (Imperial Radio - UKS favorite podcast about history: 44 follows) 
-select c.nome_do_canal, c.descricao_do_canal ,count(f.cod_canal_podcast)
-from Tb_Follow_Canal_Podcast as f join Tb_Canal_Podcast as c 
-on c.cod_canal_podcast = f.cod_canal_podcast
-group by f.cod_canal_podcast
-order by count(f.cod_canal_podcast) desc
-limit 1;
+-- 11ª:  Quais são as músicas registradas que não foram nem favoritadas nem baixadas pelos usuários? 
+-- Deve necessitar da operação da diferença entre conjuntos envolvendo pelo menos 3 tabelas (21 músicas não foram baixadas ou favoritadas)
+select m.nome_da_musica as 'Música', a.nome_da_banda as 'Artista' 
+from Tb_Musica as m join Tb_Artista_Banda as a 
+on m.cod_artista_banda = a.cod_artista_banda 
+where m.cod_musica not in (select m.cod_musica from Tb_Musica_Favoritada as m) and m.cod_musica not in (select m.cod_musica from Tb_Download_Musica as m);
+
+
+
 -- 13º: Quais os três episódios mais baixados de um podcast nacional? (Histórias de Seleção, rodada 02 e rodada 01)
 -- Join com três tabelas
 select e.titulo_do_episodio_podcast, c.nome_do_canal, count(b.cod_episodio_podcast)
@@ -1256,6 +1258,9 @@ where n.nacionalidade = 'Brazilian'
 group by b.cod_episodio_podcast
 order by count(b.cod_episodio_podcast) desc
 limit 3;
+
+-- 15ª: 
+-- deve adotar a vizualização de views
 /*
 Fim do código.
 */
