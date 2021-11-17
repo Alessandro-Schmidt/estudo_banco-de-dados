@@ -1250,9 +1250,14 @@ on m.cod_artista_banda = a.cod_artista_banda
 where m.cod_musica not in (select m.cod_musica from Tb_Musica_Favoritada as m) and m.cod_musica not in (select m.cod_musica from Tb_Download_Musica as m);
 
 
--- 12ª: Qual o nome do canal de podcast brasileiro com o episodio mais baixado? e qual o nome do episodio? 
+-- 12ª: Qual o nome do canal de podcast com o episodio mais baixados? e qual o nome do episodio e seu origem? 
 -- Deve usar produto cartesiano envolvendo mais de três tabelas
-
+select c.nome_do_canal, e.titulo_do_episodio_podcast, n.nacionalidade, count(b.cod_download_episodio) as 'Número de Downloads'
+from Tb_Canal_Podcast as c, Tb_Episodios_Podcast as e, Tb_Nacionalidade as n, Tb_Podcast_Episodio_Baixado as b
+where c.cod_canal_podcast = e.cod_canal_podcast and c.cod_nacionalidade = n.cod_nacionalidade and b.cod_episodio_podcast = e.cod_episodio_podcast
+group by c.nome_do_canal, e.titulo_do_episodio_podcast, n.nacionalidade
+order by count(b.cod_download_episodio) desc
+limit 1;
 
 
 -- 13º: Quais os três episódios mais baixados de um podcast nacional? (Histórias de Seleção, rodada 02 e rodada 01)
